@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h3>Please fill in the form</h3>
+            <label for="inName">Full Name:</label>
+            <input type="text" id="inName" placeholder="Your name...">
+            <label for="inBirth">Date of Birth:</label>
+            <input type="date" id="inBirth" placeholder="Date of birth...">
+            <label for="inField">Field:</label>
+            <input type="text" id="inField" placeholder="Field...">
+            <label for="inYear">Year:</label>
+            <input type="number" id="inYear" placeholder="Year...">
+            <label for="inNum">Roll Number:</label>
+            <input type="number" id="inNum" placeholder="Roll number...">
+            <label for="fontFamily">Font Family:</label>
+            <select id="fontFamily">
+                <option value="Arial">Arial</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            <label for="fontColor">Font Color:</label>
+            <input type="color" id="fontColor" value="#000000">
+            <label for="file" class="upload">Upload an Image</label>
+            <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+            <button id="preview">Preview</button>
+        </div>
+
+        <div class="card" id="collegeCard">
+            <canvas id="result" class="card-canvas"></canvas>
+            <button id="downloadBtn">Download Card</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+h3 {
+  color: #159;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+input[type="color"] {
+  width: calc(100% - 24px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.upload,
+button {
+  color: #fff;
+  background: #159;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.upload:hover,
+button:hover {
+  background: #0066ff; /* Change to a different color on hover */
+}
+
+.upload {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.card {
+  display: none;
+  margin-top: 20px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.card-canvas {
+  width: 110%; /* Increased width */
+  border: 2px solid #ddd;
+  border-top: 8px solid #159; /* Blue border for top part */
+  border-radius: 12px;
+  margin-bottom: 20px;
+  height: 260px; /* Height remains the same */
+  position: relative;
+  overflow: hidden; /* Hide overflow for animations */
+}
+
+.card-canvas::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.card-canvas:hover::before {
+  background-color: rgba(255, 255, 255, 0.5); /* Change to a semi-transparent white on hover */
+}
+
+#downloadBtn {
+  font-size: 16px;
+}
+
+/* Additional Styles for ID Card Lower Section */
+.card-canvas {
+  position: relative;
+}
+
+#lowerSection {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #159;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#lowerSection p {
+  margin: 5px 0;
+}
+/* Your existing CSS styles */
+/* Add the following CSS for input animation */
+.input-animation {
+  animation: inputFocusAnimation 0.5s ease-in-out;
+}
+
+@keyframes inputFocusAnimation {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+.card-canvas {
+  width: 400px; /* Set the width of the preview ID card */
+  height: 200px; /* Set the height of the preview ID card */
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
